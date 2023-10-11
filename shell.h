@@ -8,5 +8,6 @@
 
 void command_exec(const char *execute);
 void cb_print(const char *text);
+void _prompt(void);
 
 #endif
