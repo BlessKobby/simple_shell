@@ -1,5 +1,7 @@
 #include "shell.h"
 #include <sys/types.h>
+#include <sys/wait.h>
+
 /**
  * command_exec -  Execute a program as new process.
  * @execute: The command to be executed.
@@ -18,10 +20,10 @@ void command_exec(char *execute)
 	}
 	else if (ch_pid == 0)
 	{
-		char *args[] = {(char *)execute, NULL};
+		char *args[] = {execute, NULL};
 		char *envp[] = {NULL};
 
-		if (execve((char *)execute, args, envp) == -1)
+		if (execve(execute, args, envp) == -1)
 		{
 			perror("execve");
 			exit(EXIT_FAILURE);
