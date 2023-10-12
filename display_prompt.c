@@ -1,7 +1,9 @@
 #include "shell.h"
 
-/* _prompt - display prompt
+/**
+ * _prompt - A function to display shell prompt.
  *
+ * Return: Void - Function is executed successfully.
  */
 
 void _prompt(void)
