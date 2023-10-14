@@ -9,7 +9,6 @@
 
 void read_command(char *command, int size)
 {
-	cb_print("Enter a command: ");
 	fgets(command, size, stdin);
 	command[strcspn(command, "\n")] = '\0';
 }

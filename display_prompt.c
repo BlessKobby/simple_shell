@@ -8,5 +8,5 @@
 
 void prompt(void)
 {
-	cb_print("cb_shell$");
+	cb_print("cb_shell$ ");
 }
