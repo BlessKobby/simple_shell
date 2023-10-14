@@ -1,20 +1,31 @@
 #include "shell.h"
 /**
- * main - Entry point for program.
+ * read_command - Function that reads command entered by user.
  * @command: Command to be executed.
  * @size: Size of the command.
  *
  * Return: Always return 0.
  */
-void read_command(char *command, int size);
 
+void read_command(char *command, int size)
+{
+	cb_print("Enter a command: ");
+	fgets(command, size, stdin);
+	command[strcspn(command, "\n")] = '\0';
+}
+
+/**
+ * main - Entry point of program.
+ *
+ * Return: Always return 0.
+ */
 int main(void)
 {
 	char command[140];
 
-	while (1)
+		while (1)
 	{
-		_prompt();
+		prompt();
 		read_command(command, sizeof(command));
 		command_exec(command);
 	}

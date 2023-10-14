@@ -6,7 +6,7 @@
  * Return: Void - Function is executed successfully.
  */
 
-void _prompt(void)
+void prompt(void)
 {
 	cb_print("cb_shell$");
 }
