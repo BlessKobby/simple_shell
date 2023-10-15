@@ -8,9 +8,9 @@
 #include <string.h>
 #include <unistd.h>
 
-void command_exec(const char *execute);
+void text_exec(const char *execute);
 void cb_print(const char *text);
 void prompt(void);
-void command_read(char *text, size_t size);
+void text_read(char *text, size_t size);
 
 #endif

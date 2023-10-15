@@ -3,12 +3,12 @@
 #include <sys/wait.h>
 
 /**
- * command_exec -  Execute a program as new process.
- * @execute: The command to be executed.
+ * text_exec -  Execute a program as new process.
+ * @text: The text to be executed.
  *
  * Return: No return value. Program is executed or errors handled.
 */
-void command_exec(const char *execute)
+void text_exec(const char *text)
 {
 	char *args[128];
 	int arg_count = 0;
@@ -23,12 +23,16 @@ void command_exec(const char *execute)
 	else if (ch_pid == 0)
 	{
 
-		char *token = strtok((char *)execute, " ");
+		char *token = strtok((char *)text, " ");
 
 		while (token != NULL)
 		{
 			args[arg_count++] = token;
 			token = strtok(NULL, " ");
+		}
+		if (arg_count == 0)
+		{
+		exit(EXIT_FAILURE);
 		}
 	}
 	args[arg_count] = NULL; /* Array of arguments terminated by Null */

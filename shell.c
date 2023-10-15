@@ -1,16 +1,16 @@
 #include "shell.h"
 /**
- * read_command - Function that reads command entered by user.
- * @command: Command to be executed.
- * @size: Size of the command.
+ * read_text - Function that reads text entered by user.
+ * @text: Text to be executed.
+ * @size: Size of the text.
  *
  * Return: Always return 0.
  */
 
-void read_command(char *command, int size)
+void read_text(char *text, int size)
 {
-	fgets(command, size, stdin);
-	command[strcspn(command, "\n")] = '\0';
+	fgets(text, size, stdin);
+	text[strcspn(text, "\n")] = '\0';
 }
 
 /**
@@ -20,13 +20,13 @@ void read_command(char *command, int size)
  */
 int main(void)
 {
-	char command[140];
+	char text[140];
 
 		while (1)
 	{
 		prompt();
-		read_command(command, sizeof(command));
-		command_exec(command);
+		read_text(text, sizeof(text));
+		text_exec(text);
 	}
 
 	return (0);
