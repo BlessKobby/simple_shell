@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * add_node - Function adds a node to the start of the list.
+ * add_node - a function that adds a node to the start of the list.
  * @head: address of pointer to head node.
  * @str: str field of node.
  * @num: node index used by history.
@@ -34,8 +34,8 @@ list_t *add_node(list_t **head, const char *str, int num)
 }
 
 /**
- * add_node_end - Function adds a node to the end of the list.
- * @head: address of pointer to head node.
+ * add_node_end - a function that adds a node to the end of the list.
+ * @head: an address of pointer to head node.
  * @str: str field of node.
  * @num: Node index used by history.
  *
@@ -76,7 +76,7 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 
 /**
  * print_list_str - prints only the str element of a list_t linked list.
- * @h: First node pointer.
+ * @h: the First node pointer.
  *
  * Return: List size.
  */
@@ -95,8 +95,8 @@ size_t print_list_str(const list_t *h)
 }
 
 /**
- * delete_node_at_index - Function deletes node at given index.
- * @head: First node pointer address.
+ * delete_node_at_index - a function deletes node at given index.
+ * @head: the first node pointer address.
  * @index: Node index to remove.
  *
  * Return: 1 - Successful execution, 0 - Failed execution.
@@ -135,7 +135,7 @@ int delete_node_at_index(list_t **head, unsigned int index)
 }
 
 /**
- * free_list - Function frees all nodes of a list.
+ * free_list - a function that frees all nodes of a list.
  * @head_ptr: Head note pointer address.
  *
  * Return: Void.

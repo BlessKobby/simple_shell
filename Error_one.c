@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * _erratoi - Function converts a string to an integer
- * @s: String to be converted.
+ * _erratoi - a function converts a string to an integer
+ * @s: a string to be converted.
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
@@ -29,9 +29,9 @@ int _erratoi(char *s)
 }
 
 /**
- * print_error - Funtion prints an error message.
+ * print_error - a funtion that prints an error message.
  * @info: Parameter & return info structure.
- * @estr: String containing specified error.
+ * @estr: a string containing specified error.
  * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error.
  */
@@ -47,11 +47,11 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - Function prints a decimal (integer) number (base 10).
+ * print_d - a function that prints a decimal (integer) number (base 10).
  * @input: Input.
  * @fd: Filedscrptor.
  *
- * Return: Number of printed characters.
+ * Return: a number of printed characters.
  */
 int print_d(int input, int fd)
 {
@@ -86,7 +86,7 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - converter function, a clone of itoa.
+ * convert_number - a converter function, a clone of itoa.
  * @num: Number.
  * @base: Base.
  * @flags: Flags for arguments.
@@ -122,7 +122,7 @@ char *convert_number(long int num, int base, int flags)
 }
 
 /**
- * remove_comments - Function replaces first instance of '#' with '\0'.
+ * remove_comments - a function that replaces first instance of '#' with '\0'.
  * @buf: Address to modifiable string.
  *
  * Return: 0
