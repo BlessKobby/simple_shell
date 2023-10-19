@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+/**
+ * main - The main function
+ *
+ * Description: This is the main entry point of the program.
+ * It prints "Hello, Betty!" to the standard output.
+ *
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+    printf("Hello, Betty!\n");
+
+    return (0);
+}
